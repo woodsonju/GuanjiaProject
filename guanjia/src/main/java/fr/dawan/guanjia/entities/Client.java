@@ -12,7 +12,7 @@ import javax.persistence.Transient;
 
 @Entity
 @DiscriminatorValue("UTILISATEUR_CLIENT")
-public class Client extends Utilisateur{
+public class Client extends Utilisateur {
 	
 	private String numTelephone;
 	
@@ -21,4 +21,40 @@ public class Client extends Utilisateur{
 	
 	@Transient
 	private Map<String, String> preferences;
+	
+	
+	public String getNumTelephone() {
+		return numTelephone;
+	}
+
+	public void setNumTelephone(String numTelephone) {
+		this.numTelephone = numTelephone;
+	}
+
+	public List<Panier> getListPanier() {
+		return new ArrayList<Panier>(listPanier);
+	}
+
+	public void setListPanier(List<Panier> listPanier) {
+		this.listPanier = listPanier;
+	}
+
+	public void addPanier(Panier panier) {
+		if(!listPanier.contains(panier) && panier != null)
+			this.listPanier.add(panier);
+	}
+	
+	public void removePanier(Panier panier) {
+		this.listPanier.remove(panier);
+	}
+	
+	public Map<String, String> getPreferences() {
+		return preferences;
+	}
+
+	public void setPreferences(Map<String, String> preferences) {
+		this.preferences = preferences;
+	}
+	
+	
 }

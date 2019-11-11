@@ -37,7 +37,55 @@ public abstract class Utilisateur extends DbObject{
 		this.statut = statut;
 		this.typeUtilisateur = typeUtilisateur;
 	}
+
 	
-	
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+	public boolean isStatut() {
+		return statut;
+	}
+
+	public void setStatut(boolean statut) {
+		this.statut = statut;
+	}
+
+	public TypeUtilisateur getTypeUtilisateur() {
+		return typeUtilisateur;
+	}
+
+	public void setTypeUtilisateur(TypeUtilisateur typeUtilisateur) {
+		this.typeUtilisateur = typeUtilisateur;
+	}
+
 	
 }

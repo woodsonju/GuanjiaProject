@@ -21,7 +21,7 @@
 				to the database. update: update the schema. create: creates the schema, destroying 
 				previous data. create-drop: drop the schema when the SessionFactory is closed 
 				explicitly, typically when the application is stopped. -->
-			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<!-- Le langage SQL que va être utiliser Hibernate -->
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.MySQL5InnoDBDialect" />
